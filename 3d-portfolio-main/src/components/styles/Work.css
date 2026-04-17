@@ -1,0 +1,213 @@
+/* ── Work Section ── */
+/* ── Work Section ── */
+.work-section {
+  position: relative;
+  z-index: 1;
+  background-color: var(--backgroundColor);
+  padding: clamp(40px, 6vw, 80px) 16px;
+}
+
+.work-section h2 {
+  font-size: clamp(28px, 6vw, 70px);
+  font-weight: 500;
+  margin-bottom: clamp(20px, 4vw, 50px);
+  text-align: center;
+}
+
+.work-section h2 > span {
+  color: var(--accentColor);
+}
+
+.work-container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* ── Carousel ── */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  border-top: 1px solid #363636;
+  border-bottom: 1px solid #363636;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  padding: clamp(20px, 4vw, 50px) 0;
+}
+
+/* ── Layout ── */
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 5vw, 60px);
+}
+
+/* ── Info ── */
+.carousel-info {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.carousel-number h3 {
+  font-size: clamp(28px, 6vw, 60px);
+  opacity: 0.3;
+  margin: 0;
+}
+
+.carousel-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.carousel-details h4 {
+  font-size: clamp(18px, 3vw, 28px);
+  margin: 0;
+}
+
+.carousel-category,
+.carousel-tools p {
+  font-size: clamp(13px, 2vw, 16px);
+  color: #adacac;
+}
+
+/* ── Image (FIXED) ── */
+.carousel-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.work-image img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ── Arrows ── */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eae5ec;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.carousel-arrow-left {
+  left: 10px;
+}
+
+.carousel-arrow-right {
+  right: 10px;
+}
+
+/* ── Dots ── */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+}
+
+.carousel-dot-active {
+  background: var(--accentColor);
+  border-color: var(--accentColor);
+}
+
+/* ── Tablet Fix ── */
+@media (max-width: 1024px) {
+  .carousel-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-image-wrapper {
+    width: 100%;
+  }
+}
+
+/* ── Mobile Fix (IMPORTANT) ── */
+@media (max-width: 600px) {
+  .carousel-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-info {
+    width: 100%;
+    align-items: center;
+  }
+
+  .carousel-number h3 {
+    font-size: 26px;
+  }
+
+  .carousel-details h4 {
+    font-size: 16px;
+  }
+
+  .work-image img {
+    max-width: 260px;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+}
+
+/* ── Small Phones ── */
+@media (max-width: 400px) {
+  .work-image img {
+    max-width: 220px;
+  }
+}
